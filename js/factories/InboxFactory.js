@@ -17,7 +17,7 @@ angular.module('EmailApp')
       }
 
       exports.getMessages = function() {
-        var deferred $q.defer();
+        var deferred = $q.defer();
         return $http.get('json/emails.json')
           .success(function (data) {
             exports.messages = data;
@@ -29,6 +29,6 @@ angular.module('EmailApp')
           });
         return deferred.promise;
       };
-      
+
       return exports;
   });

@@ -13,12 +13,13 @@ angular.module("EmailApp", [
     .when('/inbox/email/:id', {
       templateUrl: 'views/email.html',
       controller: 'EmailCtrl',
-      controllerAs: 'email')
+      controllerAs: 'email'
+    })
     .otherwise({
       redirectTo: '/inbox'
     });
-}).run(function ($routeScope) {
+}).run(function ($rootScope) {
   $rootScope.$on('$routeChangeError', function (event, current, previous, rejection) {
-    console.log(event, previous, rejection)
+    console.log(event, current, previous, rejection)
   })
 });

@@ -6,7 +6,7 @@ angular.module('EmailApp')
       restrict: 'EA',
       replace: true,
       scope: true,
-      templateUrl: "js/directives/inbox.tmp.html",
+      templateUrl: "js/directives/inbox.tmpl.html",
       controllerAs: 'inbox',
 
       controller: function (InboxFactory) {
