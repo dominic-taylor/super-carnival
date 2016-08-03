@@ -1,6 +1,8 @@
-angular.module("EmailApp")
+angular.module('EmailApp')
   .controller('InboxCtrl',
-    function InboxCtrl() {
+    function InboxCtrl($scope) {
       'use strict';
-      console.log('Inbox loaded!');
-    });
+      $scope.meta = {
+        title: "My Inbox"
+      };  
+  });
