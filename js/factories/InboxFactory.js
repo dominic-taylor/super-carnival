@@ -7,15 +7,17 @@ angular.module('EmailApp')
 
       exports.goToMessage = function (id) {
         if(angular.isNumber(id) ){
-
+            console.log('inbox/email/'+id);
+            $location.path('inbox/email/'+id)
           }
       }
+
       exports.deleteMessage = function (id, index) {
         this.messages.splice(index, 1);
       }
 
       exports.getMessages = function() {
-        var deferred;
+        var deferred $q.defer();
         return $http.get('json/emails.json')
           .success(function (data) {
             exports.messages = data;

@@ -1,5 +1,5 @@
 angular.module('EmailApp')
-  .directive('inbox', function inbox() {
+  .directive('inbox', function InboxDirective() {
     'use strict';
 
     return {
