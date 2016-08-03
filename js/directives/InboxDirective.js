@@ -11,9 +11,11 @@ angular.module('EmailApp')
 
       controller: function (InboxFactory) {
         this.messages = [];
+
         this.goToMessage = function (id) {
-          InboxFactory.goToMessage(id)
+          InboxFactory.goToMessage(id);
         };
+
         this.deleteMessage = function (id, index) {
           InboxFactory.deleteMessage(id, index);
         };
@@ -24,6 +26,7 @@ angular.module('EmailApp')
           })  );
 
         },
+        
         link: function (scope, element, attrs, ctrl) {
 
         }

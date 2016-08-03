@@ -5,13 +5,12 @@ angular.module('EmailApp')
 
       exports.messages = [];
 
-      exports.goToMessage = function (id) {
-        if(angular.isNumber(id) ){
-            console.log('inbox/email/'+id);
-            $location.path('inbox/email/'+id)
-          }
-      }
-
+      exports.goToMessage = function(id) {
+     if ( angular.isNumber(id) ) {
+       console.log('inbox/email/' + id)
+       $location.path('inbox/email/' + id)
+     }
+   }
       exports.deleteMessage = function (id, index) {
         this.messages.splice(index, 1);
       }

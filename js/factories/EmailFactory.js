@@ -13,9 +13,11 @@ angular.module("EmailApp")
           var deferred = $q.defer();
           $http.get('json/message/' +params.id+ '.json')
             .success(function (data) {
+              console.log('email factory win');
               deferred.resolve(data);
             })
             .error(function (data) {
+              console.log('email factory fail');
                 deferred.reject(data);
             });
           return deferred.promise;

@@ -1,11 +1,14 @@
 <div class="inbox">
-  <div class="inbox__count">
-    You have {{inbox.messages.length && inbox.messages.length || 'no'}} messages
-  </div>
-  <div ng-hide="!inbox.messages.length">
-    <input type="text" class="inbox__search"
-      ng-model="inbox.search"
-      placeholder="Search by 'from', eg Ticketmaster">
+
+  <div class="search-bar">
+    <div class="inbox__count">
+      You have {{inbox.messages.length && inbox.messages.length || 'no'}} messages
+    </div>
+    <div ng-hide="!inbox.messages.length">
+      <input type="text" class="inbox__search"
+        ng-model="inbox.search"
+        placeholder="Search by 'from', eg Ticketmaster">
+    </div>
   </div>
   <ul class="inbox__list">
     <li ng-repeat="message in inbox.messages | filter:{from: inbox.search}">
